@@ -1,0 +1,25 @@
+{
+  "name": "foodies",
+  "version": "1.0.0",
+  "description": "this project is about to online food order and enjoy meal",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "online",
+    "food",
+    "order",
+    "get",
+    "your",
+    "meals",
+    "order",
+    "food"
+  ],
+  "author": "shaban ali",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongodb": "^6.9.0"
+  }
+}

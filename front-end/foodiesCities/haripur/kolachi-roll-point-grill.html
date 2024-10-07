@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kolachi Roll point & Grill</title>
+
+  <!-- boostrap css line tag -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- fontawesom cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+   <!-- fiv icon -->
+
+   <link rel="apple-touch-icon" sizes="180x180" href="/front-end/favicon_package_v0.16/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/front-end/favicon_package_v0.16/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/front-end/favicon_package_v0.16/favicon-16x16.png">
+   <link rel="manifest" href="/site.webmanifest">
+   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+
+  <style>
+    #facebook:hover {
+      font-size: 40px !important
+    }
+
+    #instagram:hover {
+      font-size: 40px !important
+    }
+
+    #youtube:hover {
+      font-size: 40px !important
+    }
+
+    #linkedin:hover {
+      font-size: 40px !important
+    }
+
+    @media (max-width : 600px) {
+      #headerfontsize{
+        font-size:20px !important
+      }
+    }
+
+    </style>
+
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row bg-danger" >
+    <div class="col-6 col-md-auto text-white fs-2 text-nowrap fw-bold text-center" id="headerfontsize" >
+    <i class="fa-solid fa-bowl-food me-3"></i>Get Your Meal
+    </div>
+    <div class="col-6 col-md-8 text-white fs-2 fw-bold text-center" id="headerfontsize">
+      <i class="fa-regular fa-face-laugh-wink" style="margin-right:5px;"></i>FOODies
+    </div>
+   
+  </div>
+</div>
+
+  <!-- bread crumb  -->
+
+  <div class="container mt-4">
+    <div class="row">
+
+      <div class="col-12 col-lg-7 border text-danger">
+
+        <div class="text-center text-capitalize">
+          <h1 class=" fw-bold">Kolachi Roll point & Grill</h1><br>
+          <p class="d-inline-block ms-5"> <i class="fa-solid fa-bag-shopping me-2"></i>Desi Food</p>
+          <p class="d-inline-block ms-5"> <i class="fa-solid fa-location-dot me-2"></i>Haripur</p>
+          <p class="d-inline-block ms-5 text-success"> open now</p>
+        </div>
+
+
+        <img src="./9.jpg" class="img-fluid">
+        <div class="text-center text-capitalize fw-bold d-flex">
+          <p style="margin-left:1%; margin-right: 30%; " class="text-nowrap">Kolachi Roll point & Grill</p>Rs:1650
+        </div>
+
+      </div>
+
+      <div class="col-12 col-lg-4 border ms-4" >
+
+        
+        <div >
+          <h1 class="text-capitalize text-white fw-bold border text-center bg-danger"> contact info</h1>
+           <p class="text-capitalize"> <i class="fa-solid fa-location-dot me-2"></i>Haripur,pakistan</p><br>
+           <p class="text-capitalize text-danger"><i class="fa-solid fa-phone-volume me-2"></i>+923115902612</p><br>
+           <P class="text-capitalize"><i class="fa-solid fa-heart me-2"></i>favorite</P>
+         </div>
+
+      
+      
+         
+         
+       
+        
+        
+       
+        <p>
+        <button class="btn btn-danger text-capitalize fw-bold  m-3" id="trigger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample2" aria-expanded="false" aria-controls="collapseWidthExample">
+          order now
+        </button>
+        </p>
+
+        <!-- order form -->
+        <div  class="container"style="min-height: 120px;">
+
+          <div class="collapse collapse-horizontal" id="collapseWidthExample2">
+            <div class="card card-body" style="width: 100%;">
+              <form class="row g-3 needs-validation" novalidate action="/order" method="post">
+                <div class="col-md-6 mt-0">
+                  <label for="validationCustom01" class="form-label">First name</label>
+                  <input type="text" name="fname" class="form-control" id="fname"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-0">
+                  <label for="validationCustom02" class="form-label">Last name</label>
+                  <input type="text" name="lname" class="form-control" id="lname"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-0"></div>
+                  <label for="validationCustom02" class="form-label">Email</label>
+                  <input type="email" name="email" class="form-control" id="email"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="col-md-6 mt-0"></div>
+                  <label for="validationCustom02" class="form-label">address</label>
+                  <input type="text" name="address" class="form-control" id="address"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+
+                  <div class="col-md-6 mt-0"></div>
+                  <label for="validationCustom02" class="form-label">Phone</label>
+                  <input type="number" name="phone" class="form-control" id="number"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="validationTextarea"  class="form-label">Message</label>
+                    <textarea class="form-control" id="textarea" name="message" placeholder="Please enter detail" required></textarea>
+                    <div class="invalid-feedback">
+                      Please enter a message in the textarea.
+                    </div>
+                  </div>
+                
+                  <!-- Google map -->
+                  <div class="col-12">
+                    <h3 class="border text-center bg-danger text-white fw-bold p-2 text-capitalize">please set your location</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52923.58342492625!2d72.88537186482064!3d33.99962329160013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38de4d486960e829%3A0x24811f20485d53f5!2sHar%C4%ABpur%2C%20Haripur%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan!5e0!3m2!1sen!2s!4v1728020153036!5m2!1sen!2s" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                  <p class="fw-bold text-center">OR</p>
+        
+               <div class="col-12 text-center">
+                <button  id="getlocation" type="button" class="bg-danger text-white fw-bold border-0 p-2 rounded text-capitalize" required>set location</button>
+                <p id="locationinfo"></p>
+               </div>
+               
+                
+          
+              
+                <div class="col-12 text-center">
+                  <button class="btn btn-danger fw-bold"  id="sbutton" type="submit">Submit Order</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        <hr>
+
+        <div class="col-12 text-center">
+          <h2> details shares through</h2>
+          <a href="https://web.facebook.com" class="fs-4 " id="facebook"><i class="fa-brands fa-facebook" style="margin-right:15px;"></i></a>
+          <a href="https://www.instagram.com" class="fs-4" id="instagram"><i class="fa-brands fa-instagram"
+              style="margin-right:15px; color:#ee2a7b"></i></a>
+          <a href="https://www.twitter.com" class="fs-4" id="youtube"> <i class="fa-brands fa-twitter" style="margin-right:15px; color:#1DA1F2"></i>
+            <a href="https://www.google.com" class="fs-4" id="youtube"> <i class="fa-brands fa-google" style="margin-right:15px; color:red"></i>
+            <a href="https://pk.linkedin.com/" class="fs-4" id="linkedin"><i class="fa-brands fa-linkedin"
+                style="margin-right:15px; color:#0a66c2"></i></a>
+        </div>
+      
+      
+
+       
+
+      </div>
+
+
+        </div>
+      </div>
+      <div class="container-fluid mt-4">
+
+      <div class="row justify-content-center" style="background-color:#d0d0d0">
+        <div class="col-12 col-md-6 text-center" style="margin-bottom:50px;">
+          <p>Copyright-2024 FOODies.com-Designed by Shaban ALi</p><br>
+          <a href="https://web.facebook.com" class="fs-4 " id="facebook"><i class="fa-brands fa-facebook" style="margin-right:15px;"></i></a>
+          <a href="https://www.instagram.com" class="fs-4" id="instagram"><i class="fa-brands fa-instagram"
+              style="margin-right:15px; color:#ee2a7b"></i></a>
+          <a href="https://www.youtube.com" class="fs-4" id="youtube"> <i class="fa-brands fa-youtube" style="margin-right:15px; color:red"></i>
+            <a href="https://pk.linkedin.com/" class="fs-4" id="linkedin"><i class="fa-brands fa-linkedin"
+                style="margin-right:15px; color:#0a66c2"></i></a>
+        </div>
+      </div>
+      </div>
+
+      <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+// get geo location
+const button = document.getElementById('getlocation');
+const locationinfo = document.getElementById('locationinfo');
+
+
+
+
+// get location function
+
+function getlocation (position) {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+  locationinfo.innerHTML = `Latitude : ${latitude} <br> Longitude:${longitude}`
+}
+
+
+
+
+
+// geo location failed some reason
+
+function failedlocation () {
+  locationinfo.innerHTML = " there was some problem";
+}
+
+button.addEventListener('click',()=>{
+  navigator.geolocation.getCurrentPosition(getlocation,failedlocation);
+})
+
+
+
+
+
+
+
+
+      </script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+     
+</body>
+
+</html>

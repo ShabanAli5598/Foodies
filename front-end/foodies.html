@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- boostrap cdn link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- fontawesom cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <!-- fiv icon -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/front-end/favicon_package_v0.16/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/front-end/favicon_package_v0.16/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/front-end/favicon_package_v0.16/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  
+
+ 
+
+
+  <title>Foodies</title>
+  <style>
+    /* small home carousal slides images */
+    .container1 {
+      position: relative;
+      width: 320px;
+      margin: 100px auto 0 auto;
+      perspective: 1000px;
+    }
+
+    .carousel2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      animation: rotate360 60s infinite forwards linear;
+    }
+
+    .carousel__face3 {
+      position: absolute;
+      width: 250px;
+      height: 200px;
+      top: 20px;
+      left: 10px;
+      right: 10px;
+      background-size: cover;
+      box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+      display: flex;
+    }
+
+    span {
+      margin: auto;
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 0px;
+    }
+
+
+    .carousel__face3:nth-child(1) {
+      background-image: url("./menu-category/bbq.jpg");
+      transform: rotateY(0deg) translateZ(430px);
+    }
+
+    .carousel__face3:nth-child(2) {
+      background-image: url("./menu-category/chiekn.jpg");
+      transform: rotateY(40deg) translateZ(430px);
+    }
+
+    .carousel__face3:nth-child(3) {
+      background-image: url("./menu-category/biryani.jpg");
+      transform: rotateY(80deg) translateZ(430px);
+    }
+
+    .carousel__face3:nth-child(4) {
+      background-image: url("./menu-category/chines.jpg");
+      transform: rotateY(120deg) translateZ(430px);
+    }
+
+    .carousel__face3:nth-child(5) {
+      background-image: url("./menu-category/coffee.jpg");
+      transform: rotateY(160deg) translateZ(430px);
+    }
+
+    .carousel__face3:nth-child(6) {
+      background-image: url("./menu-category/desi-food.jpg");
+      transform: rotateY(200deg) translateZ(430px);
+    }
+
+    .carousel__face3:nth-child(7) {
+      background-image: url("./menu-category/fish.jpg");
+      transform: rotateY(240deg) translateZ(430px);
+    }
+
+    .carousel__face3:nth-child(8) {
+      background-image: url("./menu-category/frozen-food.jpg");
+      transform: rotateY(280deg) translateZ(430px);
+    }
+
+    .carousel__face3:nth-child(9) {
+      background-image: url("./menu-category/juices.jpg");
+      transform: rotateY(320deg) translateZ(430px);
+    }
+
+    .carousel__face3:nth-child(10) {
+      background-image: url("./menu-category/piza.jpg");
+      transform: rotateY(320deg) translateZ(430px);
+    }
+
+    .carousel__face3:nth-child(11) {
+      background-image: url("./menu-category/starters.jpg");
+      transform: rotateY(320deg) translateZ(430px);
+    }
+
+
+
+    @keyframes rotate360 {
+      from {
+        transform: rotateY(0deg);
+      }
+
+      to {
+        transform: rotateY(-360deg);
+      }
+
+
+    }
+
+    #facebook:hover {
+      font-size: 40px !important
+    }
+
+    #instagram:hover {
+      font-size: 40px !important
+    }
+
+    #youtube:hover {
+      font-size: 40px !important
+    }
+
+    #linkedin:hover {
+      font-size: 40px !important
+    }
+
+    /* find my cities */
+    #abbottabad:hover{
+      transform: scale(1.1);
+      transition: all 0.5s ease-in-out;
+    }
+
+   
+
+
+    @media (max-width : 600px) {
+      #htext h1 {
+        font-size: 35px !important;
+        margin-top: 10px !important;
+
+      }
+
+      #htext p {
+        margin-left: 20px !important;
+
+      }
+
+      #search {
+        margin-left: 10px !important;
+        width: 90% !important;
+        margin-bottom: 15px;
+      }
+
+      .carousel__face3 {
+        width: 180px;
+        height: 180px;
+        ;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header row -->
+  <div class="row justify-content-between align-items-center border bg-danger">
+    <!--  city selector -->
+    <div class="col-12 order-3 order-md-1 col-md-3 ">
+      <select class="form-select border-dark" aria-label="Default select example">
+        <option selected>Select your city</option>
+        <option value="1">Abbottabad</option>
+        <option value="2">islamabad</option>
+        <option value="3">Lahore</option>
+      </select>
+    </div>
+    <!-- register and login icons -->
+    <div class="col-6 order-1  col-md-3 order-md-2  text-white fs-1 fw-bold text-center">
+      <i class="fa-regular fa-face-laugh-wink" style="margin-right:15px; font-size:40px"></i>FOODies</div>
+    <div class="col-6 order-2 col-md-4  order-md-3  text-center "><a
+        class="text-white text-capitalize text-decoration-none" href="./navigation files/register.html"><i
+          class="fa-regular fa-user"></i>regiser</a> <a class="text-white text-capitalize text-decoration-none"
+        style="margin-left:10px;" href="./navigation files/login.html"><i class="fa-solid fa-right-to-bracket"></i>login</a>
+    </div>
+  </div>
+
+  <!-- register for business -->
+   <div class="row bg-danger mt-1">
+    <div class="col-12 text-white text-center fs-2 fw-bold text-capitalize"> <i class="fa-solid fa-bag-shopping"></i> do you need a business account? <a href="./foodiesbusiness.html"><button class="btn btn-danger border-white fw-bold m-3" type="button">SIGN UP NOW</button></a>
+    
+    </div>
+   </div>
+
+  <!-- navigation bar -->
+
+  <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary  nav-underline">
+    <div class="container-fluid" style="background-color: #fd5959;">
+      <a class="navbar-brand text-white fs-1" href="#"><i class="fa-solid fa-burger"></i></a>  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white text-capitalize" aria-current="page" href="../foodies.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-white text-capitalize" href="./navigation files/deal.html">deals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-capitalize" href="./navigation files/aboutus.html">aboust us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-capitalize " href="./navigation files/contactus.html">contact us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Account
+            </a>
+            <ul class="dropdown-menu " style="background-color:#fd5959;">
+              <li><a class="dropdown-item text-capitalize" href="./navigation files/register.html">Register your self</a></li>
+            
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-capitalize" href="./navigation files/login.html">login</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!--  home text and image row  -->
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-12 col-xl-6 " id="htext">
+        <h1 class="text-capitalize text-center" style="font-size:70px; margin-top:150px;"><span
+            class="text-danger fs-1"> Welcome</span> to<br> The world of<br> testy and Fresh Food.</h1>
+        <p class="" style="columns:1; margin-left:130px">keep it easy with these simple but delicious recipes from
+          make-ahead lunches and midweek meals to fuss-free sides.</p>
+
+
+        <!-- search icon  -->
+
+        <form class="d-flex w-50" style="margin-left:250px" id="search" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-danger bg-danger text-white" type="submit">Search</button>
+      </div>
+      </form>
+
+      <!-- home image -->
+      <div class="col-12 col-xl-6 mt-3"> <img class=" img-fluid border-0 border-opacity-0 rounded"
+          src="./bgimages/burger-col.jpg"></div>
+
+
+
+    </div>
+  </div>
+
+
+
+  <!-- itmes category -->
+  <div class="container" style="margin-bottom: 500px; margin-top: 25px;">
+    <div class="row-auto ">
+      <div class="col-12 text-center text-danger mt-5 pt-5">
+        <h1 t>Category</h1>
+      </div>
+      <div clas="col-12">
+        <div class="container1">
+          <div class="carousel2">
+            <div class="carousel__face3" #fd5959;><span>BBQ</span></div>
+            <div class="carousel__face3"><span>Chiken</span></div>
+            <div class="carousel__face3"><span>Biryani</span></div>
+            <div class="carousel__face3"><span>Chines</span></div>
+            <div class="carousel__face3"><span>Coffee</span></div>
+            <div class="carousel__face3"><span>Desi-Food</span></div>
+            <div class="carousel__face3"><span>Fish</span></div>
+            <div class="carousel__face3"><span>Frozen-Food</span></div>
+            <div class="carousel__face3"><span>Juices</span></div>
+            <div class="carousel__face3"><span>Piza</span></div>
+            <div class="carousel__face3"><span>Starters</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- home page carasoul  -->
+
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="./carasoul/pizza.jpg" class="d-block w-100" alt="...">
+      </div>
+
+      <div class="carousel-item">
+        <img src="./carasoul/rice.jpg" class="d-block w-100" alt="...">
+      </div>
+
+      <div class="carousel-item">
+        <img src="./carasoul/hand.jpg" class="d-block w-100" alt="...">
+      </div>
+
+      <div class="carousel-item">
+        <img src="./carasoul/chiken.jpg" class="d-block w-100" alt="...">
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+    <!-- find us on these  cities -->
+     <div class="container mt-5">
+
+      <div class="row">
+        <h1>Find us in these cities and many more!</h1>
+        <div class="col-11  col-md-5 col-xl-4 position-relative mt-3" >
+         <a href="./foodiesCities/abbottabad/abbottabad.html"><img src="./foodiesCities/abtcity.webp" class="img-fluid rounded" class="city" id="abbottabad">
+         <div class="position-absolute bottom-0 end-1 fw-bold bg-white text-dark rounded p-1 m-2">Abbottabad</div></a>
+      </div>
+
+      <div class="col-11  col-md-5 col-xl-4 position-relative mt-3 " >
+       <a href="./foodiesCities/islamabad/islamabad.html"> <img src="./foodiesCities/islamabad2.jpg" class="img-fluid rounded" class="city" id="abbottabad">
+       <div class="position-absolute bottom-0 end-1 fw-bold bg-white text-dark rounded p-1 m-2">Islamabad</div></a>
+    </div>
+
+     <div class="col-11 col-md-5 col-xl-4 position-relative mt-3" >
+     <a href="./foodiesCities/manshera/manshera.html"><img src="./foodiesCities/resize-manshera.jpg" class="img-fluid rounded" class="city" id="abbottabad" >
+     <div class="position-absolute bottom-0 end-1 fw-bold bg-white text-dark rounded p-1 m-2">Manshera</div></a>
+  </div> 
+
+  <div class="col-11  col-md-5 col-xl-4 position-relative mt-3" >
+    <a href="./foodiesCities/lahore/lahor.html"><img src="./foodiesCities/lahore.jpg" class="img-fluid rounded" class="city" id="abbottabad">
+   <div class="position-absolute bottom-0 end-1 fw-bold bg-white text-dark rounded p-1 m-2">Lahore</div></a>
+</div>
+
+<div class="col-11  col-md-5 col-xl-4 position-relative mt-3" >
+  <a href="./foodiesCities/peshawar/peshawar.html"><img src="./foodiesCities/peshawar.jpg" class="img-fluid rounded" class="city" id="abbottabad">
+ <div class="position-absolute bottom-0 end-1 fw-bold bg-white text-dark rounded p-1 m-2">Peshawar</div></a>
+</div>
+
+
+  <div class="col-11 col-md-5 col-xl-4 position-relative mt-3" >
+    <a href="./foodiesCities/haripur/haripur.html"><img src="./foodiesCities/haripur (1).jpg" class="img-fluid rounded" class="city" id="abbottabad">
+   <div class="position-absolute bottom-0 end-1 fw-bold bg-white text-dark rounded p-1 m-2">Haripur</div></a>
+</div>
+
+<div class="col-11  col-md-5 col-xl-4 position-relative mt-3" >
+  <a href="./foodiesCities/murre/muree.html"><img src="./foodiesCities/muree.jpg" class="img-fluid rounded" class="city" id="abbottabad">
+ <div class="position-absolute bottom-0 end-1 fw-bold bg-white text-dark rounded p-1 m-2">Muree</div></a>
+</div>
+
+<div class="col-11 col-md-5 col-xl-4 position-relative mt-3" >
+  <a href="/front-end/foodiesCities/nathia gali/nathiagali.html"><img src="./foodiesCities/nathia-gali.webp" class="img-fluid rounded" class="city" id="abbottabad">
+ <div class="position-absolute bottom-0 end-1 fw-bold bg-white text-dark rounded p-1 m-2">Nathia Gali</div></a>
+</div>
+
+
+<div class="col-11 col-md-5 col-xl-4 position-relative mt-3" >
+  <a href="/front-end/foodiesCities/wha-cantt/wahacantt.html"><img src="./foodiesCities/waha-cantt.jpg" class="img-fluid rounded" class="city" id="abbottabad">
+ <div class="position-absolute bottom-0 end-1 fw-bold bg-white text-dark rounded p-1 m-2">Waha Cantt</div></a>
+</div>
+
+<div class="col-11  col-md-5 col-xl-4 position-relative mt-3" >
+  <a href="/front-end/foodiesCities/sawat/sawat.html"><img src="./foodiesCities/sawat.jpg" class="img-fluid rounded" class="city" id="abbottabad">
+ <div class="position-absolute bottom-0 end-1 fw-bold bg-white text-dark rounded p-1 m-2">Sawat</div></a>
+</div>
+      </div>
+
+    
+     </div><br><br>
+
+  <!-- home page about foodies -->
+  <div class="container">
+    <div class="row">
+      
+      <h1>Order food and groceries online from the best restaurants and shops on Foodies</h1><br>
+      Are you hungry? Did you have a long and stressful day? Interested in getting a cheesy pizza delivered to your
+      office or looking to avoid the weekly shop? Then foodies Pakistan is the right destination for you! foodies
+      offers you a long and detailed list of the best restaurants and shops near you to help make your every day
+      easier.<br><br>
+      <h1>What's new?</h1><br>
+      ✓ Wide variety of restaurants and shops, an abundance of cuisines & products.<br>
+      ✓ High quality delivery service.<br>
+      ✓ Live chat feature to give App users instant help when they need it.<br>
+      ✓ NEW: foodies grocery delivery! Discover the best shops, pharmacies, bakeries and more near you.<br><br>
+      <hr><br>
+
+      <!-- Accordion Q&A -->
+      <h2>Frequently Asked Questions?</h2><br>
+      <div class="accordion" id="accordionExample">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              <strong> How can I get Foodies delivery?</strong>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              To get foodies delivery, simply locate the restaurants and shops near you by typing in your address,
+              browse through a variety of restaurants and cuisines, check menus and prices, choose your dishes and add
+              them to the basket. Now you only need to checkout and make the payment. Soon your delicious food will
+              arrive at your doorstep!
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <strong>Which takeout restaurants open now near me?</strong>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              You can check which takeout restaurants are open now near you by simply typing your address in the
+              location bar on foodies and pressing search. You will see all the available restaurants and shops that
+              deliver to your area.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <strong>Does foodies deliver 24 hours?</strong>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Yes, foodies in Pakistan delivers 24 hours. However, many restaurants may be unavailable for a
+              late-night delivery. Please check which places in Pakistan deliver to you within 24 hours by using your
+              address.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <strong>Can you pay cash for foodies?</strong>
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Yes, you can pay cash on delivery for foodies in Pakistan.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <strong>How can I pay foodies online?</strong>
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              You can pay online while ordering at foodies Pakistan by using a credit or debit card or PayPal Easy
+              paisa/ jazz card.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              <strong>Can I order foodies for someone else?</strong>
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Yes, foodies Pakistan allows you to place an order for someone else. During checkout, just update the
+              name and delivery address of the person you're ordering for. Please keep in mind that if the delivery
+              details are not correct and the order cannot be delivered, we won't be able to process a refund.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              <strong>How much does foodies charge for delivery?</strong>
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Delivery fee charged by foodies in Pakistan depends on many operational factors, most of all - location
+              and the restaurant you are ordering from. You can always check the delivery fee while forming your order.
+              Besides, you can filter the restaurants by clicking on the "Free Delivery" icon at the top of your
+              restaurant listing.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              <strong>What restaurants let you order online?</strong>
+            </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              There are hundreds of restaurants on foodies Pakistan that let you order online. For example, KFC,
+              McDonald's, Pizza Hut, OPTP, Hardee's, Domino's, Kababjees and many-many more! In order to check all the
+              restaurants near you that deliver, just type in your address and discover all the available places.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+              <strong>Does foodies have minimum order?</strong>
+            </button>
+          </h2>
+          <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Yes, many restaurants have a minimum order. The minimum order value depends on the restaurant you order
+              from and is indicated during your ordering process.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+              <strong>What is the difference between delivery and Pick-Up?</strong>
+            </button>
+          </h2>
+          <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              If you choose delivery, a foodies rider will collect your order from the restaurant and take it to your
+              chosen delivery address. If you choose Pick-Up, you can takeaway your food directly from the restaurant
+              for extra savings – and to jump to the front of the queue. Pick-Up orders are available for restaurants
+              only.
+            </div>
+          </div>
+        </div>
+
+      </div><br><br><br>
+      <h2 class="fw-bold">Order food and groceries online with foodies now and enjoy a great dining experience! </h2>
+    
+    </div>
+  </div>
+     </div>
+
+<!-- home page footer -->
+  <div class="container-fluid mt-5">
+    <div class="row border justify-content-evenly align-items-center " style="background-color: #fd5959;">
+      <div class="col-12 order-1 col-md-4 order-md-1 text-center text-white fw-bold" style="font-size: 65px;;">
+        <i class="fa-regular fa-face-laugh-wink" style="margin-right:15px;"></i>FOODies
+      </div>
+
+      <div class="col-12 order-2  col-md-4 order-md-2 text-center text-white fw-bold "><i
+          class="fa-solid fa-house"></i>&nbsp; Main Bazar Abbottabad<br><br><i
+          class="fa-regular fa-envelope"></i>&nbsp;muahmmadshoban@gmail.com <br><br>
+        <i class="fa-solid fa-phone"></i> &nbsp; 03110597816
+      </div>
+    </div>
+    
+    <div class="row justify-content-center" style="background-color:#d0d0d0">
+      <div class="col-12 col-md-6 text-center" style="margin-bottom:50px;">
+        <p>Copyright-2024 FOODies.com-Designed by Shaban ALi</p><br>
+        <a href="https://web.facebook.com" class="fs-4 " id="facebook"><i class="fa-brands fa-facebook" style="margin-right:15px;"></i></a>
+        <a href="https://www.instagram.com" class="fs-4" id="instagram"><i class="fa-brands fa-instagram"
+            style="margin-right:15px; color:#ee2a7b"></i></a>
+        <a href="https://www.youtube.com" class="fs-4" id="youtube"> <i class="fa-brands fa-youtube" style="margin-right:15px; color:red"></i>
+          <a href="https://pk.linkedin.com/" class="fs-4" id="linkedin"><i class="fa-brands fa-linkedin"
+              style="margin-right:15px; color:#0a66c2"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
