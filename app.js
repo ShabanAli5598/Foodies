@@ -1,6 +1,7 @@
 let mongodbcon = require('./mongodbcon');
 let registrationdb = require('./registrationcon');
 let bussinessReg = require('./bussinessReg');
+let dealorder = require('./dealcon');
 let express = require('express');
 let path = require('path');
 let fpath = path.join(__dirname,'front-end')
@@ -78,7 +79,20 @@ app.post('/bussiness-reg', async(req,res)=>{
     res.redirect('/');
 
 
-})
+});
+
+app.post('/dealorder', async(req,res)=> {
+    let result = await dealorder();
+     result = result.insertOne({
+        First_Name : req.body.fname,
+        Last_Name: req.body.lname,
+        Email: req.body.email,
+        Address : req.body.email,
+        Phone: req.body.phone,
+        Message : req.body.message
+     });
+     res.sendFile(`${fpath}/navigation files/deal.html`);
+});
 
 
 
