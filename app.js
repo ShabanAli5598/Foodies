@@ -1,4 +1,6 @@
 let mongodbcon = require('./mongodbcon');
+let registrationdb = require('./registrationcon');
+let bussinessReg = require('./bussinessReg');
 let express = require('express');
 let path = require('path');
 let fpath = path.join(__dirname,'front-end')
@@ -29,6 +31,59 @@ app.post('/order', async (req,res) =>{
      res.redirect('/');
     
 });
+
+app.post('/register', async(req,res)=>{
+    let result = await registrationdb();
+    let data = await result.insertOne({
+        Name : req.body.name,
+        Last_Name : req.body.lname,
+        Email : req.body.email,
+        Password : req.body.password,
+        City : req.body.city,
+        Zip : req.body.zip,
+        Phone : req.body.phone,
+    })
+    res.sendFile(`${fpath}/navigation files/login.html`);
+
+});
+
+
+app.post('/login',async(req,res)=>{
+    let result = await registrationdb();
+    result = await result.findOne({
+        Email :req.body.email,
+        Password : req.body.password
+    })
+    if(!result){
+        res.send(" email or password are not matched..")
+    }else {
+        res.redirect('/');
+    }
+});
+
+app.post('/bussiness-reg', async(req,res)=>{
+    let result = await bussinessReg();
+    let data = result.insertOne({
+        Company_Name : req.body.cname,
+        Registration_number : req.body.rnumber,
+        Industry : req.body.industry,
+        No_of_employees : req.body.nofemp,
+        Street : req.body.street,
+        Postal_code : req.body.pcode,
+        Name : req.body.name,
+        Email : req.body.email,
+        Phone : req.body.phone
+
+    });
+    res.redirect('/');
+
+
+})
+
+
+
+
+
 
 
 

@@ -59,37 +59,38 @@
     </div>
     <div class="container mt-5 border p-3">
         <div class="row">
+            <form method="post" action="/bussiness-reg">
             <div class="col">
                 <label class="mb-3 fw-bold text-capitalize">company name</label>
-
+            </div>
+            
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="company name">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="company name" name="cname">
                     <label for="floatingInput">company name</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="number" class="form-control" id="floatingInput"
-                        placeholder="business registration number">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="business registration number" name="rnumber">
                     <label for="floatingInput">business registration number</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="industry">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="industry" name="industry">
                     <label for="floatingInput">industry</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="number" class="form-control" id="floatingInput" placeholder="No. fo employees">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="No. fo employees" name="nofemp">
                     <label for="floatingInput">No. fo employees</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Street name">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Street name" name="street">
                     <label for="floatingInput">Street name</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="number" class="form-control" id="floatingInput" placeholder="Postal code">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="Postal code" name="pcode">
                     <label for="floatingInput">Postal code</label>
                 </div>
                 <hr>
@@ -97,17 +98,17 @@
                 <label class="mb-3 fw-bold text-capitalize"> Your details</label>
 
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="your name">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="your name" name="name">
                     <label for="floatingInput">Your name</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="Coprate Email">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="Coprate Email" name="email">
                     <label for="floatingInput">Coprate Email</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="phone" class="form-control" id="floatingInput" placeholder="Coprate Email">
+                    <input type="phone" class="form-control" id="floatingInput" placeholder="Coprate phone" name="phone">
                     <label for="floatingInput">phone</label>
                 </div>
 
@@ -115,10 +116,11 @@
                     <button class="btn btn-danger p-2" type="submit">Button</button>
 
                 </div>
+            
 
 
 
-            </div>
+            </form>
         </div>
     </div>
 
